@@ -26,3 +26,22 @@ ERROR ?? Propiedad no encontrada: df.logFile
 AppConfig ❱❱ app.properties cargado correctamente
 AppConfig ❱❱ app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
 AppConfig ❱❱ app.properties.df.logFile : AJStorage/AJDataFile/ExoMunision.txt
+[2026-01-29 00:42:54] GOOD : Acceso concedido
+AppConfig ?? app.properties cargado correctamente
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.df.logFile : AJStorage/AJDataFile/ExoMunision.txt
+[2026-01-29 00:44:38] GOOD : Acceso concedido
+AppConfig ?? app.properties cargado correctamente
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.df.logFile : AJStorage/AJDataFile/ExoMunision.txt
+[2026-01-29 00:48:16] GOOD : Acceso concedido
+AppConfig ?? app.properties cargado correctamente
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.df.logFile : AJStorage/AJDataFile/ExoMunision.txt
+[2026-01-29 00:52:20] GOOD : Acceso concedido
+AppConfig ❱❱ app.properties cargado correctamente
+AppConfig ❱❱ app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ❱❱ app.properties.df.logFile : AJStorage/AJDataFile/ExoMunision.txt

@@ -56,9 +56,9 @@ public class AJDatabaseInitializer {
                     "    Estado          VARCHAR(1) NOT NULL DEFAULT 'A',\n" +
                     "    FechaCreacion   DATETIME DEFAULT (datetime('now','localtime')),\n" +
                     "    FechaModifica   DATETIME DEFAULT (datetime('now','localtime')),\n" +
-                    "    FOREIGN KEY (IdTipoExobot)    REFERENCES MS_TipoExobot(IdTipoExobot),\n" +
-                    "    FOREIGN KEY (IdArmaDerecha)   REFERENCES MS_Arma(IdArma),\n" +
-                    "    FOREIGN KEY (IdArmaIzquierda) REFERENCES MS_Arma(IdArma)\n" +
+                    "    FOREIGN KEY (IdTipoExobot)    REFERENCES TipoExobot(IdTipoExobot),\n" +
+                    "    FOREIGN KEY (IdArmaDerecha)   REFERENCES Arma(IdArma),\n" +
+                    "    FOREIGN KEY (IdArmaIzquierda) REFERENCES Arma(IdArma)\n" +
                     ")");
 
             // DML - Insertar datos iniciales solo si no existen
@@ -76,8 +76,7 @@ public class AJDatabaseInitializer {
                 rs.next();
                 if (rs.getInt(1) == 0) {
                     stmt.execute("INSERT INTO Arma (Tipo, Accion, Entrenada) VALUES ('Misil', 'Disparar', 0)");
-                    stmt.execute("INSERT INTO Arma (Tipo, Accion, Entrenada) VALUES ('Mortero', 'Lanzar', 0)");
-                    stmt.execute("INSERT INTO Arma (Tipo, Accion, Entrenada) VALUES ('Escudo', 'Proteger', 1)");
+                    stmt.execute("INSERT INTO Arma (Tipo, Accion, Entrenada) VALUES ('Mortero', 'Disparar', 0)");
                     System.out.println("  → Datos de Arma insertados");
                 }
             }
@@ -87,17 +86,17 @@ public class AJDatabaseInitializer {
                 if (rs.getInt(1) == 0) {
                     stmt.execute(
                             "INSERT INTO Exobot (IdTipoExobot, IdArmaDerecha, IdArmaIzquierda, Serie, Nombre) " +
-                                    "VALUES (1, 1, 2, 'INF-001', 'ExoAlpha')");
+                                    "VALUES (1, 1, 2, 'INF-001', 'ExoTrooper')");
                     stmt.execute(
                             "INSERT INTO Exobot (IdTipoExobot, IdArmaDerecha, IdArmaIzquierda, Serie, Nombre) " +
-                                    "VALUES (2, 3, 3, 'DEF-001', 'ExoShield')");
+                                    "VALUES (2, 2, 1, 'DEF-001', 'ExoScout')");
                     System.out.println("  → Datos de Exobot insertados");
                 }
             }
 
             // Crear vista (recrearla siempre por si hay cambios)
             stmt.execute("DROP VIEW IF EXISTS ExobotDetalle");
-            stmt.execute("CREATE VIEW MS_ExobotDetalle AS\n" +
+            stmt.execute("CREATE VIEW ExobotDetalle AS\n" +
                     "SELECT\n" +
                     "    e.IdExobot,\n" +
                     "    e.Nombre,\n" +
