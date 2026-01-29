@@ -1,0 +1,6 @@
+[2026-01-28 23:46:10] GOOD : Acceso concedido
+ERROR al cargar ?? app.properties no encontrado en el classpath
+AppConfig ?? app.properties.db.File : null
+ERROR ?? Propiedad no encontrada: db.File
+AppConfig ?? app.properties.df.logFile : null
+ERROR ?? Propiedad no encontrada: df.logFile
