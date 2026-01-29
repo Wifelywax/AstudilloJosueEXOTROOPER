@@ -1,11 +1,10 @@
 package AJDataAccess.AJDAOs;
-
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
+//Refactorizacion
 import AJDataAccess.AJDTOs.AJArmaDTO;
 import AJDataAccess.AJHelpers.DataHelperSQLiteDAO;
 import AJInfrastructura.AJAppException;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class AJArmaDAO extends DataHelperSQLiteDAO<AJArmaDTO> {
     public AJArmaDAO() throws AJAppException {

@@ -1,6 +1,28 @@
-[2026-01-28 23:46:10] GOOD : Acceso concedido
+[2026-01-29 00:11:23] GOOD : Acceso concedido
 ERROR al cargar ?? app.properties no encontrado en el classpath
 AppConfig ?? app.properties.db.File : null
 ERROR ?? Propiedad no encontrada: db.File
 AppConfig ?? app.properties.df.logFile : null
 ERROR ?? Propiedad no encontrada: df.logFile
+[2026-01-29 00:19:24] GOOD : Acceso concedido
+ERROR al cargar ?? app.properties no encontrado en el classpath
+AppConfig ?? app.properties.db.File : null
+ERROR ?? Propiedad no encontrada: db.File
+AppConfig ?? app.properties.df.logFile : null
+ERROR ?? Propiedad no encontrada: df.logFile
+[2026-01-29 00:27:15] GOOD : Acceso concedido
+ERROR al cargar ?? app.properties no encontrado en el classpath
+AppConfig ?? app.properties.db.File : null
+ERROR ?? Propiedad no encontrada: db.File
+AppConfig ?? app.properties.df.logFile : null
+ERROR ?? Propiedad no encontrada: df.logFile
+[2026-01-29 00:31:10] GOOD : Acceso concedido
+ERROR al cargar ?? app.properties no encontrado en el classpath
+AppConfig ?? AJapp.properties.db.File : null
+ERROR ?? Propiedad no encontrada: db.File
+AppConfig ?? AJapp.properties.df.logFile : null
+ERROR ?? Propiedad no encontrada: df.logFile
+[2026-01-29 00:36:00] GOOD : Acceso concedido
+AppConfig ❱❱ app.properties cargado correctamente
+AppConfig ❱❱ app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ❱❱ app.properties.df.logFile : AJStorage/AJDataFile/ExoMunision.txt

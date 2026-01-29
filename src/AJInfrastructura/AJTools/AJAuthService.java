@@ -19,9 +19,9 @@ public class AJAuthService {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int intento = 0;
 
-        System.out.println("\n╔════════════════════════════════╗");
-        System.out.println("║     MS_EXOBOT - AUTENTICACIÓN  ║");
-        System.out.println("╚════════════════════════════════╝\n");
+        
+        System.out.println("║     EXOBOT - AUTENTICACIÓN  ║");
+       
 
         while (intento < MAX_INTENTOS) {
             intento++;
@@ -52,10 +52,9 @@ public class AJAuthService {
             }
         }
 
-        System.out.println("\n╔════════════════════════════════╗");
+       
         System.out.println("║  Máximo de intentos excedido   ║");
-        System.out.println("║  Aplicación cerrada            ║");
-        System.out.println("╚════════════════════════════════╝\n");
+
         registrarLog("ERROR: Acceso denegado. Máximo de intentos excedido");
         return false;
     }

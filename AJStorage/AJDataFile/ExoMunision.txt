@@ -27,3 +27,5 @@ Energía_	BioSensor,  Energía_BioEscaner, Munición_Laser, Munición_Bayoneta		
 Munición_Laser, Munición_Bayoneta		 ,   		,Munición_	Fusil,  Munición_Revolver		
 Energía_GPS,    Energía_Giroscopio		,Munición_Misil, Munición_Mortero		    
 Energía_	BioSensor,  Energía_BioEscaner , Munición_Laser, Munición_Bayoneta		   ,
+╭─💀─ SHOW ❱❱ Ups! Error inesperado. Por favor, contacte al administrador del sistema. 
+╰──── LOG  ❱❱ 2026-01-29 00:36:00 | AJDatabaseInitializer.initializeDatabase | No suitable driver found for jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite

@@ -1,12 +1,12 @@
 
 
 package AJBusinessLogic.AJEntities;
-
+//Refactorizacion
 import AJDataAccess.AJDAOs.AJArmaDAO;
 import AJDataAccess.AJDAOs.AJExobotDAO;
 import AJDataAccess.AJDTOs.AJExobotDTO;
-import AJInfrastructura.AJTools.CMD;
 import AJInfrastructura.AJAppException;
+import AJInfrastructura.AJTools.CMD;
 
 
 public class ExaBotService {

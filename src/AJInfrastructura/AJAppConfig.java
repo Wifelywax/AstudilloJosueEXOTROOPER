@@ -1,10 +1,9 @@
 //  © 2K26 ❱──💀──❰ pat_mic ? code is life : life is code
 package AJInfrastructura;   
+import AJInfrastructura.AJTools.CMD;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Properties;
-
-import AJInfrastructura.AJTools.CMD;
 
 public abstract class AJAppConfig {
 
@@ -17,7 +16,7 @@ public abstract class AJAppConfig {
     private static final String KEY_RES_IMG_LOGO = "res.img.Logo";
     private static final String KEY_RES_IMG_SPLASH = "res.img.Splash";
 
-    // Configuración dinámica (filesystem)
+    
     public static String getDATABASE() {
         return getProperty(KEY_DB_NAME);
     }
@@ -26,7 +25,7 @@ public abstract class AJAppConfig {
         return getProperty(KEY_FILE_LOG);
     }
 
-    // Recursos empaquetados (classpath)
+   
     public static URL getImgMain() {
         return getAppResource(KEY_RES_IMG_MAIN);
     }
@@ -39,19 +38,20 @@ public abstract class AJAppConfig {
         return getAppResource(KEY_RES_IMG_SPLASH);
     }
 
-    // Mensajes
+   
     public static final String MSG_DEFAULT_ERROR = "Ups! Error inesperado. Por favor, contacte al administrador del sistema.";
     public static final String MSG_DEFAULT_CLASS = "undefined";
     public static final String MSG_DEFAULT_METHOD = "undefined";
 
-    // 🔥 CARGA CORRECTA DEL PROPERTIES (AQUÍ ESTABA EL BUG)
-    static {
-        try (InputStream in = AJAppConfig.class
-                .getClassLoader()
-                .getResourceAsStream(APP_PROPERTIES)) {
+    
+   static {
+     
+        try (InputStream in = AJAppConfig.class.getResourceAsStream("app.properties")) {
 
             if (in == null) {
-                throw new RuntimeException("app.properties no encontrado en el classpath");
+                // Si entra aquí, imprime la ruta para depurar
+                CMD.print("ERROR CRÍTICO: No encuentro app.properties junto a AJAppConfig.class");
+                throw new RuntimeException("app.properties no encontrado en el paquete AJInfrastructura");
             }
 
             props.load(in);
@@ -59,6 +59,7 @@ public abstract class AJAppConfig {
 
         } catch (Exception e) {
             CMD.print("ERROR al cargar ❱❱ " + e.getMessage());
+            e.printStackTrace(); // Esto nos dará más detalles si falla
         }
     }
 

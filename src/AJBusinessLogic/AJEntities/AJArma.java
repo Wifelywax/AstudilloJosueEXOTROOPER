@@ -1,5 +1,5 @@
 package AJBusinessLogic.AJEntities;
-
+//Refactorizacion
 import AJInfrastructura.AJTools.CMD;
 
 public class AJArma {

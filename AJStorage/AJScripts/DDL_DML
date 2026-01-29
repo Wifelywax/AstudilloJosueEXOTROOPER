@@ -54,9 +54,9 @@ CREATE TABLE Exobot (
     FechaCreacion   DATETIME DEFAULT (datetime('now','localtime')),
     FechaModifica   DATETIME DEFAULT (datetime('now','localtime')),
 
-    FOREIGN KEY (IdTipoExobot)    REFERENCES MS_TipoExobot(IdTipoExobot),
-    FOREIGN KEY (IdArmaDerecha)   REFERENCES MS_Arma(IdArma),
-    FOREIGN KEY (IdArmaIzquierda) REFERENCES MS_Arma(IdArma)
+    FOREIGN KEY (IdTipoExobot)    REFERENCES TipoExobot(IdTipoExobot),
+    FOREIGN KEY (IdArmaDerecha)   REFERENCES Arma(IdArma),
+    FOREIGN KEY (IdArmaIzquierda) REFERENCES Arma(IdArma)
 );
 
 
