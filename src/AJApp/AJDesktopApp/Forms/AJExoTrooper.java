@@ -1,14 +1,13 @@
 package AJApp.AJDesktopApp.Forms;
 
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import java.awt.*;
-
 import AJDataAccess.AJDAOs.AJExobotDAO;
 import AJDataAccess.AJDTOs.AJExobotDTO;
 import AJInfrastructura.AJAppException;
-
+import AJInfrastructura.AJAppStyle;
+import java.awt.*;
 import java.util.List;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 public class AJExoTrooper extends JFrame {
 
@@ -34,9 +33,10 @@ public class AJExoTrooper extends JFrame {
         }
 
         setVisible(true);
+        this.getContentPane().setBackground(AJAppStyle.COLOR_BACKGROUND);
     }
 
-    // ---------------- UI ----------------
+  
 
     private void initUI() {
 
@@ -50,12 +50,14 @@ public class AJExoTrooper extends JFrame {
         tblExobot = new JTable(model);
         JScrollPane scroll = new JScrollPane(tblExobot);
 
-        // Panel de Alumno (solo estética)
+       
         JPanel pnlAlumno = new JPanel();
         pnlAlumno.setLayout(new BoxLayout(pnlAlumno, BoxLayout.Y_AXIS));
         pnlAlumno.setBorder(BorderFactory.createTitledBorder("Alumno(s)"));
-        pnlAlumno.setBackground(new Color(240, 240, 240));
+        pnlAlumno.setBorder(BorderFactory.createTitledBorder("Cedula:1751455096"));
+        pnlAlumno.setBackground(new Color(0, 128, 0));
 
+        
         JLabel lblAlumnoNombre = new JLabel("Josué Astudillo");
         lblAlumnoNombre.setFont(new Font("Arial", Font.BOLD, 14));
         lblAlumnoNombre.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -77,6 +79,7 @@ public class AJExoTrooper extends JFrame {
         pnlControles.add(cboExtremidad);
         pnlControles.add(btnEntrenar);
         pnlControles.add(btnAccion);
+        pnlControles.setBackground(new Color(173, 216, 230));
 
         // Panel superior contenedor (Alumno + Controles)
         JPanel pnlSuperior = new JPanel(new BorderLayout());

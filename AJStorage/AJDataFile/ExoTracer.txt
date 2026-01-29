@@ -45,3 +45,39 @@ AppConfig ?? app.properties.df.logFile : AJStorage/AJDataFile/ExoMunision.txt
 AppConfig ❱❱ app.properties cargado correctamente
 AppConfig ❱❱ app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
 AppConfig ❱❱ app.properties.df.logFile : AJStorage/AJDataFile/ExoMunision.txt
+[2026-01-29 00:53:37] GOOD : Acceso concedido
+AppConfig ?? app.properties cargado correctamente
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.df.logFile : AJStorage/AJDataFile/ExoMunision.txt
+[2026-01-29 00:56:56] GOOD : Acceso concedido
+AppConfig ?? app.properties cargado correctamente
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.df.logFile : AJStorage/AJDataFile/ExoMunision.txt
+[2026-01-29 01:05:38] GOOD : Acceso concedido
+AppConfig ?? app.properties cargado correctamente
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+[2026-01-29 01:09:11] GOOD : Acceso concedido
+AppConfig ?? app.properties cargado correctamente
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+[2026-01-29 01:15:12] GOOD : Acceso concedido
+AppConfig ?? app.properties cargado correctamente
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+[2026-01-29 01:16:51] GOOD : Acceso concedido
+AppConfig ?? app.properties cargado correctamente
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+[2026-01-29 01:19:48] GOOD : Acceso concedido
+AppConfig ?? app.properties cargado correctamente
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+[2026-01-29 01:23:04] GOOD : Acceso concedido
+AppConfig ?? app.properties cargado correctamente
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+AppConfig ?? app.properties.db.File : jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite

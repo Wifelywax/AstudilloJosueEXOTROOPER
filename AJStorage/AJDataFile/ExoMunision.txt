@@ -37,3 +37,7 @@ Energía_	BioSensor,  Energía_BioEscaner , Munición_Laser, Munición_Bayoneta	
 ????? LOG  ?? 2026-01-29 00:48:17 | AJExobotDAO.readAll | [SQLITE_ERROR] SQL error or missing database (no such table: AJ_vwExobotDetalle)
 ╭─💀─ SHOW ❱❱ Ups! Error inesperado. Por favor, contacte al administrador del sistema. 
 ╰──── LOG  ❱❱ 2026-01-29 00:52:20 | AJDatabaseInitializer.initializeDatabase | No suitable driver found for jdbc:sqlite:AJStorage/AJDatabase/EXOTROOPER.sqlite
+???? SHOW ?? Ups! Error inesperado. Por favor, contacte al administrador del sistema. 
+????? LOG  ?? 2026-01-29 00:53:37 | AJExobotDAO.readAll | [SQLITE_ERROR] SQL error or missing database (no such table: AJ_vwExobotDetalle)
+???? SHOW ?? Ups! Error inesperado. Por favor, contacte al administrador del sistema. 
+????? LOG  ?? 2026-01-29 00:56:57 | AJExobotDAO.readAll | [SQLITE_ERROR] SQL error or missing database (no such column: Nombre)

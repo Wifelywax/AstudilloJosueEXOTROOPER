@@ -6,22 +6,23 @@ Script: Creacion de la estructura de datos para Exobot
 */
 
 
-DROP TABLE IF EXISTS Usuario;
-DROP VIEW  IF EXISTS ExobotDetalle;    /*Refactorizacion*/
+
+DROP VIEW  IF EXISTS AJ_vwExobotDetalle; /*Refacto*/
 DROP TABLE IF EXISTS Exobot;
-DROP TABLE IF EXISTS Arma;           /*Refactorizacion*/
+DROP TABLE IF EXISTS Arma;         /*Refacto*/
 DROP TABLE IF EXISTS TipoExobot;
+DROP TABLE IF EXISTS Usuario;
 
-
+-- 2. CREAR TABLAS (ESTO ESTABA BIEN)
 CREATE TABLE Usuario (
     IdUsuario      INTEGER      NOT NULL PRIMARY KEY AUTOINCREMENT,
     Cedula         VARCHAR(10)  NOT NULL UNIQUE,
     Nombre         VARCHAR(100) NOT NULL
 );
+
 CREATE TABLE TipoExobot (
     IdTipoExobot    INTEGER PRIMARY KEY AUTOINCREMENT,
     Nombre          VARCHAR(30) NOT NULL UNIQUE,
-
     Estado          VARCHAR(1) NOT NULL DEFAULT 'A',
     FechaCreacion   DATETIME DEFAULT (datetime('now','localtime')),
     FechaModifica   DATETIME DEFAULT (datetime('now','localtime'))
@@ -31,40 +32,28 @@ CREATE TABLE Arma (
     IdArma      INTEGER PRIMARY KEY AUTOINCREMENT,
     Tipo        VARCHAR(30) NOT NULL,
     Accion      VARCHAR(50) NOT NULL,
-    Entrenada   INTEGER DEFAULT 0, -- 0 = NO, 1 = SI
-
+    Entrenada   INTEGER DEFAULT 0, 
     Estado          VARCHAR(1) NOT NULL DEFAULT 'A',
     FechaCreacion   DATETIME DEFAULT (datetime('now','localtime')),
     FechaModifica   DATETIME DEFAULT (datetime('now','localtime'))
 );
 
 CREATE TABLE Exobot (
-     IdExobot        INTEGER PRIMARY KEY AUTOINCREMENT,
+    IdExobot        INTEGER PRIMARY KEY AUTOINCREMENT,
     IdTipoExobot    INTEGER NOT NULL,
     IdArmaDerecha   INTEGER,
     IdArmaIzquierda INTEGER,
-
     Serie           VARCHAR(30) NOT NULL UNIQUE,
     Nombre          VARCHAR(30) NOT NULL,
-
-    Entreno         VARCHAR(2) DEFAULT 'NO', -- SI / NO
+    Entreno         VARCHAR(2) DEFAULT 'NO',
     NoAccion        INTEGER DEFAULT 0,
-
     Estado          VARCHAR(1) NOT NULL DEFAULT 'A',
     FechaCreacion   DATETIME DEFAULT (datetime('now','localtime')),
     FechaModifica   DATETIME DEFAULT (datetime('now','localtime')),
-
     FOREIGN KEY (IdTipoExobot)    REFERENCES TipoExobot(IdTipoExobot),
     FOREIGN KEY (IdArmaDerecha)   REFERENCES Arma(IdArma),
     FOREIGN KEY (IdArmaIzquierda) REFERENCES Arma(IdArma)
 );
-
-
-
-
--- ==========================================
--- DATOS DE PRUEBA 
--- ==========================================
 
 
 INSERT INTO Usuario (Cedula, Nombre) VALUES 
@@ -72,36 +61,30 @@ INSERT INTO Usuario (Cedula, Nombre) VALUES
 ('1751455096', 'Josue Sebastian Astudillo'),
 ('1723896541', 'Ana Maria Lopez');
 
-INSERT INTO TipoExobot (Nombre)
-VALUES ('Infantería'), ('Defensa'), ('Explorador');
+INSERT INTO TipoExobot (Nombre) VALUES ('Infantería'), ('Defensa'), ('Explorador');
 
-INSERT INTO Arma (Tipo, Accion, Entrenada)
-VALUES
+INSERT INTO Arma (Tipo, Accion, Entrenada) VALUES
 ('Misil', 'Disparar', 0),
 ('Mortero', 'Disparar', 0);
 
-INSERT INTO Exobot
-(IdTipoExobot, IdArmaDerecha, IdArmaIzquierda, Serie, Nombre)
-VALUES
+INSERT INTO Exobot (IdTipoExobot, IdArmaDerecha, IdArmaIzquierda, Serie, Nombre) VALUES
 (1, 1, 2, 'INF-001', 'ExoTrooper'),
 (2, 2, 1, 'EXP-001', 'ExoScout');
 
-CREATE VIEW ExobotDetalle AS
+
+CREATE VIEW AJ_vwExobotDetalle AS
 SELECT
     e.IdExobot,
     e.Nombre,
     e.Serie,
-    t.Nombre AS TipoExobot,
+    t.Nombre AS TipoExobot, 
     e.Entreno,
     e.NoAccion,
     ad.Tipo AS ArmaDerecha,
-    ai.Tipo AS ArmaIzquierda
+    ai.Tipo AS ArmaIzquierda,
+    e.Estado 
 FROM Exobot e
 JOIN TipoExobot t ON e.IdTipoExobot = t.IdTipoExobot
 LEFT JOIN Arma ad ON e.IdArmaDerecha = ad.IdArma
 LEFT JOIN Arma ai ON e.IdArmaIzquierda = ai.IdArma
 WHERE e.Estado = 'A';
-
-
--- Verificación final
-SELECT * FROM Usuario;
